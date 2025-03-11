@@ -1,72 +1,60 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Version>5.0.0</Version>
+		<LangVersion>Latest</LangVersion>
+		<TargetFrameworks>netstandard2.0;net6.0-windows;net7.0-windows;net8.0-windows;net9.0-windows</TargetFrameworks>
+		<OutputType>Library</OutputType>
+		<RootNamespace>Imagin.Common</RootNamespace>
+		<AssemblyName>Imagin.Common</AssemblyName>
+		<NeutralLanguage>en</NeutralLanguage>
+		<DocumentationFile>$(TargetDir)Imagin.Common.xml</DocumentationFile>
+		<Nullable>disable</Nullable>
+		<!--<WarningsAsErrors>nullable</WarningsAsErrors>-->
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<None Remove=".git" />
+		<None Remove=".gitattributes" />
+		<None Remove=".gitignore" />
+		<None Remove="Imagin.Common.xml" />
+		
+		<Compile Remove="Arithmetic\**" />
+		<Compile Remove="Lang\asdf\**" />
+		<Compile Remove="Timers\**" />
+		<Compile Remove="[Interfaces]\**" />
+		<Compile Remove="Collections\EnumCollection.cs" />
+		<Compile Remove="Collections\Generic\TrackableList.cs" />
+		<Compile Remove="DayOfWeek.cs" />
+		<Compile Remove="HDirection.cs" />
+		<Compile Remove="IPeriodical.cs" />
+		<Compile Remove="Linq\IColorTetrad.cs" />
+		<Compile Remove="Linq\IColorVector.cs" />
+		<Compile Remove="Percent.cs" />
+		<Compile Remove="Quadruplet.cs" />
+		<Compile Remove="RowColumn.cs" />
+		<Compile Remove="Side.cs" />
+		<Compile Remove="Span.cs" />
+		<Compile Remove="TaggedObject.cs" />
+		<Compile Remove="Transmission.cs" />
+		<Compile Remove="VDirection.cs" />
+		<Compile Remove="_Interfaces\ITaggable.cs" />
+		
+		<EmbeddedResource Remove="Arithmetic\**" />
+		<EmbeddedResource Remove="Lang\asdf\**" />
+		<EmbeddedResource Remove="Timers\**" />
+		<EmbeddedResource Remove="[Interfaces]\**" />
+		
+		<None Remove="Arithmetic\**" />
+		<None Remove="Lang\asdf\**" />
+		<None Remove="Timers\**" />
+		<None Remove="[Interfaces]\**" />
+		<None Remove="project.json" />
+		<None Remove="project.lock.json" />
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Imagin.Common</AssemblyName>
-    <RootNamespace>Imagin.Common</RootNamespace>
-  </PropertyGroup>
+		<EmbeddedResource Update="Lang\Main.resx" Generator="ResXFileCodeGenerator" LastGenOutput="Main.Designer.cs" />		
+		<Compile Update="Lang\Main.Designer.cs" DesignTime="true" AutoGen="true" DependentUpon="Main.resx" />
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard2.0\Imagin.Common.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Arithmetic\**" />
-    <Compile Remove="Lang\asdf\**" />
-    <Compile Remove="Timers\**" />
-    <Compile Remove="[Interfaces]\**" />
-    <EmbeddedResource Remove="Arithmetic\**" />
-    <EmbeddedResource Remove="Lang\asdf\**" />
-    <EmbeddedResource Remove="Timers\**" />
-    <EmbeddedResource Remove="[Interfaces]\**" />
-    <None Remove="Arithmetic\**" />
-    <None Remove="Lang\asdf\**" />
-    <None Remove="Timers\**" />
-    <None Remove="[Interfaces]\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Collections\EnumCollection.cs" />
-    <Compile Remove="Collections\Generic\TrackableList.cs" />
-    <Compile Remove="DayOfWeek.cs" />
-    <Compile Remove="HDirection.cs" />
-    <Compile Remove="IPeriodical.cs" />
-    <Compile Remove="Linq\IColorTetrad.cs" />
-    <Compile Remove="Linq\IColorVector.cs" />
-    <Compile Remove="Percent.cs" />
-    <Compile Remove="Properties\AssemblyInfo.cs" />
-    <Compile Remove="Quadruplet.cs" />
-    <Compile Remove="RowColumn.cs" />
-    <Compile Remove="Side.cs" />
-    <Compile Remove="Span.cs" />
-    <Compile Remove="TaggedObject.cs" />
-    <Compile Remove="Transmission.cs" />
-    <Compile Remove="VDirection.cs" />
-    <Compile Remove="_Interfaces\ITaggable.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="project.json" />
-    <None Remove="project.lock.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Lang\Main.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Main.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Lang\Main.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Main.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-
+		<None Include="..\readme.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 </Project>

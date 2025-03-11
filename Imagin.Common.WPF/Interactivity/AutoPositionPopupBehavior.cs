@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls.Primitives;
-using System.Windows.Interactivity;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
+
+using Microsoft.Xaml.Behaviors;
 
 namespace Imagin.Common.Interactivity
 {

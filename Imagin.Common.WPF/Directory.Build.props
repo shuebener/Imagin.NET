@@ -1,0 +1,20 @@
+<Project>
+	<PropertyGroup>		
+		<Authors>Sebastian Huebener</Authors>
+		<PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/shuebener/Imagin.NET</PackageProjectUrl>
+		<GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+		<GitVersion>false</GitVersion>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>		
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/shuebener/Imagin.NET</RepositoryUrl>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<EmbedAllSources>true</EmbedAllSources>
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
+	</PropertyGroup>
+</Project>

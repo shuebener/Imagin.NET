@@ -9,7 +9,7 @@
         /// <summary>
         /// 
         /// </summary>
-        TValue _value;
+        TValue _value = default;
         /// <summary>
         /// 
         /// </summary>

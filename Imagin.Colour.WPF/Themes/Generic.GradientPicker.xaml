@@ -3,8 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
     xmlns:local="clr-namespace:Imagin.Colour.Controls"
     xmlns:Common="http://imagin.tech/imagin/common"
-    xmlns:Common.Geometry="clr-namespace:Imagin.Common.Geometry;assembly=Imagin.Common"
-    xmlns:Common.Media="clr-namespace:Imagin.Common.Media;assembly=Imagin.Common">
+    xmlns:CommonGeometry="clr-namespace:Imagin.Common.Geometry;assembly=Imagin.Common"
+    xmlns:CommonMedia="clr-namespace:Imagin.Common.Media;assembly=Imagin.Common">
     <Style x:Key="{x:Type local:GradientPicker}" TargetType="{x:Type local:GradientPicker}">
         <Setter Property="Template">
             <Setter.Value>
@@ -35,7 +35,7 @@
 
                         <ComboBox
                             Grid.Row="1"
-                            ItemsSource="{Common:Enumerate {x:Type Common.Media:GradientType}}"
+                            ItemsSource="{Common:Enumerate {x:Type CommonMedia:GradientType}}"
                             SelectedValue="{Binding GradientType, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}, UpdateSourceTrigger=PropertyChanged}">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate>
@@ -107,7 +107,7 @@
                                         </ContentControl>
                                         <ComboBox
                                             Grid.Column="1"
-                                            ItemsSource="{Common:Enumerate {x:Type Common.Geometry:AngularUnit}}"
+                                            ItemsSource="{Common:Enumerate {x:Type CommonGeometry:AngularUnit}}"
                                             SelectedValue="{Binding AngularUnit, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}, UpdateSourceTrigger=PropertyChanged}"
                                             VerticalAlignment="Top">
                                             <ComboBox.ItemTemplate>
@@ -119,7 +119,7 @@
                                     </Grid>
                                     <ComboBox
                                         Grid.Row="1"
-                                        ItemsSource="{Common:Enumerate {x:Type Common.Media:GradientPosition}}"
+                                        ItemsSource="{Common:Enumerate {x:Type CommonMedia:GradientPosition}}"
                                         Margin="0,10,0,0"
                                         SelectedValue="{Binding GradientPosition, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                         VerticalAlignment="Top">
